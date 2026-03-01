@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KBZ Live Stats</title>
+
+  <style>
+    :root { color-scheme: dark; }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #eaeaea;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .total {
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      opacity: 0.9;
+    }
+
+    .coin {
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      opacity: 0.8;
+      white-space: nowrap;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      .yt { grid-column: 1 / -1; }
+    }
+
+    .card {
+      background: #0b0b0b;
+      border: 1px solid #1c1c1c;
+      border-radius: 10px;
+      padding: 8px;
+      overflow: hidden;
+    }
+
+    .card h2 {
+      font-size: 12px;
+      margin: 0 0 8px 0;
+      opacity: 0.8;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    iframe {
+      width: 100%;
+      border: 0;
+      display: block;
+      background: transparent;
+    }
+
+    /* Embed heights */
+    .ifr-yt { height: 180px; }
+    .ifr-small { height: 90px; }
+
+    .note {
+      font-size: 11px;
+      opacity: 0.6;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- HEADER CU TOTAL + 🪙 -->
+    <div class="header">
+      <!-- 🔢 TOTAL FOLLOWERS (EDITABIL MANUAL) -->
+      <div class="total">
+        TOTAL FOLLOWERS: <strong>— 116,843</strong>
+      </div>
+
+      <!-- 🪙 Babilon (EDITABIL MANUAL, fără vibe de cont bancar) -->
+      <div class="coin">
+        🪙 <strong>651</strong>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <!-- YOUTUBE -->
+      <div class="card yt">
+        <h2>YouTube (3 canale)</h2>
+        <iframe class="ifr-yt" src="https://livecounts.nl/embed/#!/UCNVYVNWG85GNnnwxuYCSbKA" allowfullscreen></iframe>
+        <iframe class="ifr-yt" src="https://livecounts.nl/embed/#!/UCgNhW3RbYpeKCPcYUWD3JVw" allowfullscreen></iframe>
+        <iframe class="ifr-yt" src="https://livecounts.nl/embed/#!/UClqkxMvqbZnffhg2Qxyec3w" allowfullscreen></iframe>
+      </div>
+
+      <!-- INSTAGRAM -->
+      <div class="card">
+        <h2>Instagram</h2>
+        <iframe class="ifr-small"
+          src="https://livecounts.nl/instagram-realtime/embed/?u=killerbananaz"
+          style="background:#fff;">
+        </iframe>
+      </div>
+
+      <!-- TIKTOK -->
+      <div class="card">
+        <h2>TikTok</h2>
+        <iframe class="ifr-small"
+          src="https://livecounts.nl/tiktok-realtime/embed/?u=killerbananaz">
+        </iframe>
+      </div>
+
+      <!-- TWITCH -->
+      <div class="card">
+        <h2>Twitch</h2>
+        <iframe class="ifr-small"
+          src="https://livecounts.io/embed/twitch-live-follower-counter/killerbananazarmy"
+          style="background:#fff;">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="note">
+      TOTAL FOLLOWERS și 🪙 sunt manuale. Modifică cifrele direct în cod.
+    </div>
+
+  </div>
+</body>
+</html>
